@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+/* ####################### Start Global  Rules ####################### */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root {
+    --dark-blue-intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+    --dark-blue-main-background: hsl(218, 28%, 13%);
+    --dark-blue-footer-background: hsl(216, 53%, 9%);
+    --dark-blue-testimonials-background: hsl(219, 30%, 18%);
+    --cyan-inside-call-to-action-gradient: hsl(176, 68%, 64%);
+    --blue-inside-call-to-action-gradient: hsl(198, 60%, 50%);
+    --light-red-error: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --lis-color: #8d9198;
+    --main-transition: 0.3s;
+    --border-radius: 7rem;
+}
+
+.container {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.container2 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 1000px) {
+    .container2 {
+        width: 85%;
+    }
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-color: var(--dark-blue-intro-and-email-sign-up-background);
+    color: var(--white);
+}
+
+
+ul {
+    list-style: none;
+}
+
+ul li,
+button,
+i {
+    cursor: pointer;
+}
+
+p {
+    color: var(--lis-color);
+    line-height: 1.6;
+}
+
+/* ####################### End Global  Rules  */
+
+/* Start Header  */
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+header .container img {
+    width: 120px;
+}
+
+header .container ul {
+    display: flex;
+    align-items: center;
+}
+
+header .container ul li {
+    margin-left: 30px;
+    color: var(--lis-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+header .container ul li:hover {
+    color: var(--white);
+}
+
+@media(max-width: 500px) {
+
+    header .container img {
+        width: 80px;
+    }
+
+    header .container ul li {
+        margin-left: 10px;
+    }
+}
+
+/* End Header  */
+
+/* Start landing */
+.landing {
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing img {
+    width: 500px;
+}
+
+.landing h1 {
+    font-size: 35px;
+    margin: 40px 0;
+}
+
+.landing p {
+    margin: 0 auto 20px;
+    font-weight: 400;
+    font-size: 15px;
+    width: 50%;
+}
+
+.landing button {
+    padding: 10px 70px;
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: 400;
+    border: none;
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+.landing button:hover {
+    background: var(--cyan-inside-call-to-action-gradient);
+}
+
+@media(max-width: 900px) {
+    .landing img {
+        width: 250px;
+    }
+
+    .landing h1 {
+        font-size: 25px;
+    }
+
+    .landing p {
+        width: 100%;
+    }
+}
+
+/* End landing */
+
+/* Start Main section  */
+.main-section {
+    background-color: var(--dark-blue-main-background);
+    margin: 120px 0 0;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    top: -460px;
+    left: -2px;
+    width: 100%;
+    z-index: -1;
+    height: 500px;
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.main-section .boxes-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 150px;
+}
+
+.main-section .boxes-1 .box h3 {
+    margin: 15px 0;
+}
+
+.main-section .boxes-2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    text-align: left;
+}
+
+.main-section .boxes-2 img {
+    width: 50%;
+}
+
+.main-section .content {
+    width: 50%;
+}
+
+.main-section .boxes-2 h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main-section .boxes-2 p {
+    margin-bottom: 15px;
+}
+
+.main-section .boxes-2 a {
+    color: var(--cyan-inside-call-to-action-gradient);
+    position: relative;
+}
+
+.main-section .boxes-2 a::before {
+    content: "\f061";
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: -25px;
+    color: var(--white);
+    background-color: var(--cyan-inside-call-to-action-gradient);
+    padding: 2px 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.main-section .boxes-2 a:hover {
+    color: var(--white);
+}
+
+
+
+@media(max-width: 1000px) {
+    .main-section .boxes-2 {
+        flex-direction: column;
+    }
+
+    .main-section .boxes-2 img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .main-section .content {
+        width: 100%;
+    }
+
+    .main-section .boxes-2 h2 {
+        font-size: 20px;
+    }
+}
+
+.main-section .boxes-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.main-section .boxes-3::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: -36px;
+    width: 55px;
+    height: 45px;
+    background-image: url(../images/bg-quotes.png);
+}
+
+
+.main-section .boxes-3 .box {
+    background-color: var(--dark-blue-intro-and-email-sign-up-background);
+    padding: 20px;
+    text-align: left;
+    box-shadow: 11px 12px 5px rgb(29 40 59 / 55%);
+}
+
+
+.main-section .boxes-3 .box .text {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-section .boxes-3 .box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.main-section .boxes-3 .box span {
+    color: var(--lis-color);
+    font-size: 10px;
+}
+
+.main-section .box-4 {
+    background-color: var(--dark-blue-intro-and-email-sign-up-background);
+    box-shadow: 5px 4px 9px 0px rgb(0 0 0 / 20%);
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    bottom: -120px;
+}
+
+.main-section .box-4 h2 {
+    margin: 20px 0;
+}
+
+.main-section .box-4 .box-4-p {
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.main-section .box-4 form {
+    margin: 20px 0;
+    position: relative;
+}
+
+.main-section .box-4 form input {
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+.main-section .box-4 form::before {
+    content: "Please enter a valid Address";
+    position: absolute;
+    left: 40px;
+    bottom: -15px;
+    color: var(--light-red-error);
+    font-size: 12px;
+    display: none;
+}
+
+.box-4 form.invalid-email::before {
+    display: block;
+}
+
+.main-section .box-4 form button {
+    margin-left: 20px;
+    color: var(--white);
+    width: 30%;
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+.main-section .box-4 form button:hover {
+    background: var(--cyan-inside-call-to-action-gradient);
+}
+
+.main-section .box-4 form input,
+.main-section .box-4 form button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+
+@media(max-width: 800px) {
+    .main-section .box-4 {
+        width: 100%;
+    }
+
+    .main-section .box-4 form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-section .box-4 form::before {
+        bottom: 90px;
+        left: 20px;
+    }
+
+    .main-section .box-4 form input {
+        width: 100%;
+
+    }
+
+    .main-section .box-4 form button {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
+
+
+/* End Main section  */
+
+/* Start Footer  */
+footer {
+    background-color: var(--dark-blue-footer-background);
+    padding: 200px 0 20px;
+}
+
+footer .logo {
+    width: 120px;
+}
+
+footer .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+footer ul {
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    margin-bottom: 15px;
+    color: var(--lis-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.contact img {
+    width: 15px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer .icons {
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .icons li {
+    margin-left: 15px;
+    padding: 10px 13px;
+    border: 1px solid var(--lis-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+footer ul li:hover {
+    color: var(--white);
+}
+
+footer .icons li:hover {
+    color: var(--cyan-inside-call-to-action-gradient);
+    border-color: var(--cyan-inside-call-to-action-gradient);
+}
+
+footer .location {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+footer .location p {
+    width: 90%;
+}
+
+@media(max-width: 500px) {
+    footer .icons {
+        margin: 0 auto;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* End Footer  */
